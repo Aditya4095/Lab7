@@ -1,6 +1,6 @@
 [build]
   functions = "/"
-  publish = "dist"
+  publish = "build"
   command = "npm run build"
 
 [[redirects]]
