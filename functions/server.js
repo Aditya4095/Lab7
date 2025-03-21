@@ -2,7 +2,7 @@ const express = require('express');
 const serverless = require('serverless-http');
 const cors = require('cors');
 const axios = require('axios');
-const projects = require('../../projects.json'); // Adjust path based on where your JSON file is
+const projects = require('../src/projects.json'); // Adjust path based on where your JSON file is
 
 app.get('./netlify/functions/server', )
 
