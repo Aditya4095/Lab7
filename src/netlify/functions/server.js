@@ -1,10 +1,10 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const cors = require('cors');
 const axios = require('axios');
-const projects = require('./../projects.json');
+const projects = require('./../projects.json'); // Adjust path based on where your JSON file is
 
 const app = express();
-const PORT = 5000;
 
 // Middleware
 app.use(cors());
@@ -17,8 +17,8 @@ app.get('/api/projects', (req, res) => {
 
 // Route to fetch weather data
 app.get('/api/weather', async (req, res) => {
-  const city = req.query.city || 'Halifax'; // Default city is Halifax
-  const apiKey = '870c16220336405995afc1fb03c51d8f'; // Replace with your OpenWeatherMap API key
+  const city = req.query.city || 'Halifax';
+  const apiKey = '870c16220336405995afc1fb03c51d8f'; // Store this in .env in production
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   try {
@@ -30,7 +30,4 @@ app.get('/api/weather', async (req, res) => {
   }
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports.handler = serverless(app);
