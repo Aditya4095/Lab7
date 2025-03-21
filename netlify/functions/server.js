@@ -4,7 +4,7 @@ const cors = require('cors');
 const axios = require('axios');
 const projects = require('../../src/projects.json'); // Adjust path based on where your JSON file is
 
-app.get('./netlify/functions/server', )
+
 
 const app = express();
 
