@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/weather');
+        const response = await fetch('/api/weather');  // ✅ Updated to relative path
         const data = await response.json();
         setWeather(data);
       } catch (error) {
@@ -20,7 +20,6 @@ export default function Home() {
 
   return (
     <div className="text-center py-5">
-      {/* Hero Section */}
       <div className="hero-section bg-light py-5 mb-5">
         <h1 className="display-4 fw-bold">Welcome to My Portfolio</h1>
         <p className="lead">Software Engineer | Cyber Security Analyst | AI Enthusiast</p>
@@ -30,7 +29,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Weather Section */}
       {weather && (
         <div className="card shadow mb-5">
           <div className="card-body">
@@ -41,7 +39,6 @@ export default function Home() {
         </div>
       )}
 
-      {/* Cards Section */}
       <div className="row mt-5">
         <div className="col-md-6 mb-4">
           <div className="card h-100 shadow">
