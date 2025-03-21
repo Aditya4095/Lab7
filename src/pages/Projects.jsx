@@ -6,7 +6,7 @@ export default function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/api/projects'); // ✅ Updated to relative path
+        const response = await fetch('/api/projects');
         const data = await response.json();
         setProjects(data);
       } catch (error) {
@@ -25,11 +25,15 @@ export default function Projects() {
           <div className="col-md-4 mb-4" key={index}>
             <div className="card h-100 shadow">
               <div className="card-body">
-                <h5 className="card-title">{project.name}</h5>
-                <p className="card-text">{project.description}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                <h5 className="card-title">{project.title}</h5>
+                <p className="card-text"><strong>Problem:</strong> {project.problem}</p>
+                <p className="card-text"><strong>Impact:</strong> {project.impact}</p>
+                {/* Optionally display tech stack */}
+                <p className="card-text"><strong>Tech Stack:</strong> {project.tech}</p>
+                {/* View Project button can link to something if available */}
+                <button className="btn btn-primary" disabled>
                   View Project
-                </a>
+                </button>
               </div>
             </div>
           </div>
