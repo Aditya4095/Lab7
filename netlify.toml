@@ -3,7 +3,7 @@
   publish = "dist"
   command = "npm run build"
 
-  [[redirects]]
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/server/:splat"
   status = 200
