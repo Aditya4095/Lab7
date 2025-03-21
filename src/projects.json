@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Cloud-Based Task Manager",
+      "tech": "AWS, React, Node.js, Docker",
+      "problem": "Need for secure, scalable task management solution with real-time updates",
+      "solution": [
+        "Architected serverless backend using AWS Lambda & API Gateway",
+        "Implemented CI/CD pipeline with Docker containers",
+        "Secured sensitive data with AWS Secrets Manager"
+      ],
+      "impact": "Reduced deployment time by 40% through containerization"
+    },
+    {
+      "id": 2,
+      "title": "IT Infrastructure Automation",
+      "tech": "PowerShell, Azure AD, ServiceNow",
+      "problem": "Manual user provisioning causing delays in account management",
+      "solution": [
+        "Developed automated mailbox migration scripts",
+        "Integrated Azure AD for identity management",
+        "Created SolarWinds monitoring templates"
+      ],
+      "impact": "Improved incident resolution efficiency by 20%"
+    },
+    {
+      "id": 3,
+      "title": "Travel with AI",
+      "tech": "Gemini API, Google Maps API, React Native, Expo, Google Places API",
+      "problem": "Difficulty in planning personalized travel itineraries with real-time location updates",
+      "solution": [
+        "Integrated Gemini API for generating AI-powered travel itineraries",
+        "Used Google Maps API for real-time location tracking and navigation",
+        "Fetched location names dynamically using Google Places API",
+        "Built the application using React Native and Expo for cross-platform compatibility"
+      ],
+      "impact": "Enhanced user experience by providing personalized and dynamic travel planning assistance"
+    }
+  ]

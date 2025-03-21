@@ -1,0 +1,38 @@
+.nav-link {
+  &.active {
+    font-weight: bold;
+    color: #2c3e50 !important;
+  }
+}
+
+.card {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+/* Dark theme specific styles */
+body.dark {
+  .hero-section {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+  }
+}
