@@ -1,6 +1,6 @@
 [build]
-  functions = "/"
-  publish = "build"
+  functions = "netlify/functions"
+  publish = "dist"
   command = "npm run build"
 
 [[redirects]]
